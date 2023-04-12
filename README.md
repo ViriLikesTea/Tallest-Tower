@@ -9,6 +9,7 @@ further work will be done on this, unless I feel like doing so, which is unlikel
 
 Clone the project
 
+
 ```bash
   git clone https://github.com/ViriLikesTea/Tallest-Tower.git
 ```
@@ -29,5 +30,5 @@ Run the game
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![screenshot](https://user-images.githubusercontent.com/77090035/231499355-28012af4-8aa8-413b-a427-7035f287f21d.png)
 
