@@ -10,7 +10,7 @@ further work will be done on this, unless I feel like doing so, which is unlikel
 Clone the project
 
 ```bash
-  git clone link
+  git clone https://github.com/ViriLikesTea/Tallest-Tower.git
 ```
 
 Go to the project directory
