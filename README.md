@@ -25,7 +25,7 @@ Go to the project directory
 Run the game
 
 ```bash
-  python Tallest_Tower.py
+  python Tallest_Tower (vx.x).py
 ```
 
 
