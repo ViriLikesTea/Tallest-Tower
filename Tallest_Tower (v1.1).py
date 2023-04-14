@@ -233,11 +233,13 @@ def genocide():
      print("You waltz through the gate, and into the outside.\n Only for the many dead to haunt you for the remainder of your life.")
      waitfunc()
      print("You managed to escape, you monster. This was the Genocide Win (3/4).")
+     playagain()
 
 def escape():
      waitfunc(1)
      print("You unlock the gate, revealing the outside, which for whatever reason remains unguarded.")
      print("You managed to escape! Congrats on the Escape Win (4/4). ")
+     playagain()
 
 
 
