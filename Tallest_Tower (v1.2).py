@@ -560,7 +560,7 @@ def guard_check(): # Checks for items to pass or convince guard
           print("You stand face to face with the Guard, they stare at you baffled.\n")
           print('Guard: "Hey, you! What are you doing here?!"')
           waitfunc(2)
-          guardinteract = input("What will you say/do? (type a letter)\nA. Say you're a guard.\nB. Convice them you're invisible.\nC. Stun Guard.\nD. Attack. ")
+          guardinteract = input("What will you say/do? (type a letter)\nA. Say you're a guard.\nB. Convice them you're invisible.\nC. Stun Guard.\nD. Attack.\n")
 
           if guardinteract.lower() == "a":
                actguard()
@@ -633,7 +633,7 @@ def pass_guard(): # after passing guard, dialogue and choices
           if egg.lower() == "yes":
                print("The sheet is labelled Easter Eggs.")
                print("Try this next time you play:")
-               print("*Jumping out of the window in your cell\n*Convincing the guard at your cell that he's not real")
+               print("*Jumping out of the window in your cell\n*Convincing the guard at your cell that he's not real\n*Just type 'die'\n")
                print("Odd.")
                print("You return to the castle entrance, spell in hand")
                castle_door()
