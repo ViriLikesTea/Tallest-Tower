@@ -32,6 +32,7 @@ def playagain(): # Ask to play again
       ans = input("Do you want to play again?: ")
       if "y" in ans.lower():
             game()
+            
       else:
             print("Exiting!")
             sys.exit()
@@ -45,6 +46,7 @@ def play(): # Ask to play game
      if "y" in ans.lower():
           name = input("What is your name?: ")
           game()
+
      else:
           print("Exiting!")
           sys.exit()
@@ -71,6 +73,9 @@ def cellchoice(): # Choices in the Cell
 
           elif "4th Wall" in dialogue.lower():
               wallbreak()
+          
+          elif "jump" and "window" in dialogue.lower():
+               window()
 
           elif "Convince" and "not real" in dialogue.lower():
                wallbreak()
@@ -126,11 +131,11 @@ def cellchoice(): # Choices in the Cell
 
      elif "Convince" and "not real" in dialogue.lower():
           wallbreak()
-          
+     
      else:
           print("I don't understand that.")
 
-def cellchoice2(): #Cell Choices after failing to pick lock
+def cellchoice2(): # Cell Choices after failing to pick lock
      dialogue = input("What will you do? (type a letter) \nA. Talk to the guard \nB. Examine the hay pile\nC. Something... bad?\n")
      if dialogue.lower() == "a":
           talkguard()
@@ -152,6 +157,9 @@ def cellchoice2(): #Cell Choices after failing to pick lock
 
           elif "Convince" and "not real" in dialogue.lower():
                wallbreak()
+          
+          elif "jump" and "window" in dialogue.lower():
+               window()
           
           else:
                print("I don't understand that.")
@@ -415,8 +423,8 @@ def castle_door(): # Get to castle door/escape
 
 def attackguard2(): # Attack Guard, when unarmed
      print("You decide you are somehow fit enough to take down a fully armed guard, can't tell if you're just brave or stupid. Maybe both.")
-     ch = ranch(1, 5)
-     if ch == 5:
+     ch = ranch(1, 3)
+     if ch == 3:
           print("By some miracle (because it definitely wasn't skill) you manage to take down the guard. \nYou grab them through the bars of your cell, strangling them and obtaining their keys.\n Allowing you to unlock the gate.")
           waitfunc(1)
           guarddeaths += 1
@@ -443,8 +451,8 @@ def attackguard2(): # Attack Guard, when unarmed
 def attackguard(): # Attack guard, when armed
      if "sword" in uinv:
           print("You run at the guard, sword in hand.")
-          ch = ranch(1, 4)
-          if ch == 4:
+          ch = ranch(1, 3)
+          if ch == 3:
                print("Almost effortlessly the guard strikes you down.")
                print("You died.")
                waitfunc(1)
@@ -462,8 +470,8 @@ def attackguard(): # Attack guard, when armed
      else:
 
           print("You decide you are somehow fit enough to take down a fully armed guard, can't tell if you're just brave or stupid. Maybe both.")
-          ch = ranch(1, 5)
-          if ch == 4:
+          ch = ranch(1, 3)
+          if ch == 3:
                guarddeaths += 1
                print("By some miracle (because it definitely wasn't skill) you manage to take down the guard. \nYou grab their sword from them and cut them down.\n Leaving the doorway wide open.")
                waitfunc(1)
@@ -505,8 +513,8 @@ def convinceinvis(): # Easter Egg to convice guard you're invisible
 
 def actguard(): # Act like a guard choice
      print('You: "Woah, wait I am a guard too!"')
-     ch = ranch(1, 5)
-     if ch == 5:
+     ch = ranch(1, 2)
+     if ch == 2:
                print("You feel a weird tingling.")
                waitfunc(2)
                print('Guard: “YOU ARE OUT OF UNIFORM, SOLDIER! WHERE IS YOUR POWER ARMOR!?”')
@@ -686,8 +694,8 @@ def pass_guard(): # after passing guard, dialogue and choices
 def bribeguard(): # Bribe the guard
      print('You: "I can get money. I will make a dead drop once I am out."')
      waitfunc(2)
-     ch = ranch(1, 5)
-     if ch == 5:
+     ch = ranch(1, 3)
+     if ch == 3:
           waitfunc(1)
           print('Guard: "Hmm...Fine I will let you out. If you get caught, I have nothing to do with your escape."')
           escape_jailcell()
@@ -749,8 +757,8 @@ def talkguard(): # Talk to Guard from jailcell
     waitfunc(1)
 
 def window(): # Jump from window easter egg
-     ch = ranch(1, 4)
-     if ch == 4:
+     ch = ranch(1, 2)
+     if ch == 2:
               windowwin()
      else:
           print("You jump from the window and plummet to your death.")
