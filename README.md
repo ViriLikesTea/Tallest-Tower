@@ -5,7 +5,7 @@ I created this along side another student as a part of my programming class. Hen
 further work will be done on this, unless I feel like doing so, which is unlikely. 
 
 ### Note
-<b>The random number generator on versions before v1.2 does not work<b/>
+<i>The random number generator on versions before v1.2 does not work<i/>
 
 ## Run Locally
 
