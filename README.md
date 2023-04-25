@@ -4,7 +4,7 @@ Tallest Tower is a text based adventure game in which you attempt to escape from
 I created this along side another student as a part of my programming class. Hence why no
 further work will be done on this, unless I feel like doing so, which is unlikely. 
 
-### Note
+### ⚠️ Note ⚠️
 <i>The random number generator on versions before v1.2 does not work<i/>
 
 ## Run Locally
