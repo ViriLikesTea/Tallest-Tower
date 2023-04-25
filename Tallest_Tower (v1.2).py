@@ -25,7 +25,8 @@ def waitfunc(time): # Function to wait time, as not to print large bodies of tex
       t.sleep(time)
 
 def ranch(num1, num2): # Ran(dom)ch(ance), Random Number Generation Handeler
-      ran.randint(num1, num2)
+      dip = ran.randint(num1, num2)
+      return dip
 
 def playagain(): # Ask to play again
       uinv.clear()
@@ -422,6 +423,7 @@ def castle_door(): # Get to castle door/escape
 
 
 def attackguard2(): # Attack Guard, when unarmed
+     global guarddeaths
      print("You decide you are somehow fit enough to take down a fully armed guard, can't tell if you're just brave or stupid. Maybe both.")
      ch = ranch(1, 3)
      if ch == 3:
@@ -449,9 +451,10 @@ def attackguard2(): # Attack Guard, when unarmed
           playagain()
 
 def attackguard(): # Attack guard, when armed
+     global guarddeaths
      if "sword" in uinv:
           print("You run at the guard, sword in hand.")
-          ch = ranch(1, 3)
+          ch = ranch(1, 4)
           if ch == 3:
                print("Almost effortlessly the guard strikes you down.")
                print("You died.")
@@ -498,9 +501,9 @@ def convinceinvis(): # Easter Egg to convice guard you're invisible
      print('Guard: "Huh?"')
      waitfunc(2)
      print('You: "I was able to make myself turn invisible through sheer mental will. Pretty soon I will be exploding rabbits just by thinking about it."')
-     ch = ranch(1, 4)
+     ch = ranch(1, 3)
 
-     if ch == 4:
+     if ch == 3:
           waitfunc(2)
           print("The guard is too stunned to stop you from passing by.")
           pass_guard()
@@ -582,6 +585,7 @@ def guard_check(): # Checks for items to pass or convince guard
 
           elif guardinteract.lower() == "d":
                attackguard()
+               pass_guard()
 
 
 def escape_jailcell(): # Escaoe jail cell dialogue and options
@@ -727,8 +731,8 @@ def combust(): # Literally just explode
 def claiminnocence(): # Claim you're innocent
      print('You: "I am not the guy you think I am. There has been a mistake!')
      waitfunc(2)
-     ch = ranch(1, 5)
-     if ch == 5:
+     ch = ranch(1, 4)
+     if ch == 4:
           print('Guard: "Hmm...Fine I will let you out. If you get caught, I have nothing to do with your escape."')
           escape_jailcell()
      else:
